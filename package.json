@@ -1,0 +1,23 @@
+{
+  "name": "eslint-config-duckduckgo",
+  "version": "1.0.0",
+  "description": "DuckDuckGo ESLint default configuration for JavaScript linting.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:duckduckgo/eslint-config-duckduckgo.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "duckduckgo"
+  ],
+  "author": "https://github.com/bbraithwaite",
+  "license": "ISC",
+  "peerDependencies": {
+          "eslint": ">= 3"
+  }
+}
