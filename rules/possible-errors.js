@@ -36,6 +36,7 @@ module.exports = {
         'no-extra-boolean-cast': 'warn',
 
         // disallow unnecessary parentheses (temporarily disabled)
+        // TODO: review
         'no-extra-parens': ['off', 'all', {
             conditionalAssign: true,
             nestedBinaryExpressions: true,
