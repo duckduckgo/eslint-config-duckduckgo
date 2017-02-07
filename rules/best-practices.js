@@ -19,7 +19,7 @@ module.exports = {
         'dot-location': ['error', 'property'],
 
         // enforce dot notation whenever possible
-        'dot-notation': 'warn',
+        'dot-notation': 'error',
 
         // disallow lexical declarations in case/default clauses
         'no-case-declarations': 'error',
