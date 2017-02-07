@@ -71,7 +71,7 @@ module.exports = {
         'no-redeclare': 'error',
         
         // disallow use of assignment in return statement
-        // TODO: discuss, I think this should be off.
+        // TODO: discuss this.
         'no-return-assign': 'off',
         
         // disallow self assignment
