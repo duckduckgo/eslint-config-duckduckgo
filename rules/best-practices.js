@@ -93,7 +93,7 @@ module.exports = {
         'radix': 'error',
 
         // require var declarations be placed at the top of their containing scope
-        // We may want this someday for ES6 migration path
+        // TODO: we should take this seriously for ES6 migration path
         'vars-on-top': 'off',
 
         // require or disallow Yoda conditions
