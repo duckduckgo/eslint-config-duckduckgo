@@ -33,6 +33,9 @@ module.exports = {
         // disallow empty destructuring patterns
         'no-empty-pattern': 'error',
 
+        // disallow null comparisons without type-checking operators
+        'no-eq-null': 'error',
+
         // disallow use of eval()
         'no-eval': 'error',
 
@@ -63,6 +66,9 @@ module.exports = {
         // disallow use of octal literals
         'no-octal': 'error',
 
+        // disallow the use of the __proto__ property
+        'no-proto': 'error',
+
         // disallow reassigning function parameters
         // TOOD: discuss this.
         'no-param-reassign': ['off', { props: false }],
@@ -74,6 +80,9 @@ module.exports = {
         // TODO: discuss this.
         'no-return-assign': 'off',
         
+        // disallow javascript: urls
+        'no-script-url': 'error',
+
         // disallow self assignment
         'no-self-assign': 'error',
         
