@@ -4,7 +4,7 @@ module.exports = {
             "curly": ["error", "all"],
 
             // matches jshint newcap: true
-            "new-cap": "error",
+            "new-cap": ["error", { "properties": false }],
 
             // matches jshint asi: false
             "semi": ["error", "always"],
@@ -16,7 +16,7 @@ module.exports = {
             "no-debugger": "error",
 
             // matches jshint boss: true
-            "no-cond-assign": ["error", "except-parens"],
+            "no-cond-assign": ["off", "except-parens"],
 
             // matches jshint evil: false
             "no-eval": "error",
@@ -28,7 +28,7 @@ module.exports = {
             "no-script-url": "error",
 
             // matches jshint sub: false
-            "dot-notation": "error",
+            "dot-notation": ["error", { "allowKeywords": false }],
 
             // matches jshint laxcomma: false
             "comma-style": ["error", "last"],
