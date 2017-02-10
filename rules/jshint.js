@@ -4,7 +4,7 @@ module.exports = {
             "curly": ["error", "all"],
 
             // matches jshint newcap: true
-            "new-cap": "on",
+            "new-cap": "error",
 
             // matches jshint asi: false
             "semi": ["error", "always"],
