@@ -2,6 +2,6 @@ module.exports = {
     extends: [
         "./environments",
         "./globals",
-        "./rules/jshint/js"
+        "./rules/jshint.js"
     ].map(require.resolve)
 };
