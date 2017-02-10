@@ -1,48 +1,48 @@
 module.exports = {
         rules: {
             // matches jshint curly: true
-            'curly': ['error', 'all'],
+            "curly": ["error", "all"],
 
             // matches jshint newcap: true
-            'new-cap': 'on',
+            "new-cap": "on",
 
             // matches jshint asi: false
-            'semi': ['error', 'always'],
+            "semi": ["error", "always"],
 
             // matches jshint multistr: false
-            'no-multi-str': 'error',
+            "no-multi-str": "error",
 
             // matches jshint debug: false
-            'no-debugger': 'error',
+            "no-debugger": "error",
 
             // matches jshint boss: true
-            'no-cond-assign': ['error', 'except-parens'],
+            "no-cond-assign": ["error", "except-parens"],
 
             // matches jshint evil: false
-            'no-eval': 'error',
+            "no-eval": "error",
 
             // matches jshint proto: false
-            'no-proto': 'error',
+            "no-proto": "error",
 
             // matches jshint scripturl: false
-            'no-script-url': 'error',
+            "no-script-url": "error",
 
             // matches jshint sub: false
-            'dot-notation': 'error',
+            "dot-notation": "error",
 
             // matches jshint laxcomma: false
-            'comma-style': ['error', 'last'],
+            "comma-style": ["error", "last"],
 
             // matches jshint validthis: false
-            'no-invalid-this': 'error',
+            "no-invalid-this": "error",
 
             // matches jshint withstmt: false
-            'no-with': 'error',
+            "no-with": "error",
 
             // matches jshint eqnull: false
-            'no-eq-null': 'error',
+            "no-eq-null": "error",
 
             // matches jshint loopfunc: false
-            'no-loop-func': 'error'
+            "no-loop-func": "error"
         }
 };
