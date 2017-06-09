@@ -4,6 +4,7 @@ module.exports = {
         "./globals",
         "./rules/jshint.js",
         "./rules/possible-errors.js",
-        "./rules/best-practices.js"
+        "./rules/best-practices.js",
+        "./rules/variables.js"
     ].map(require.resolve)
 };
