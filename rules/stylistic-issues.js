@@ -16,6 +16,7 @@ module.exports = {
         // require or disallow trailing commas
         "comma-dangle": ["error", "never"],
 
+        /*
         // enforce consistent spacing before and after commas
         "comma-spacing": ["error", { before: false, after: true }],
 
@@ -224,5 +225,6 @@ module.exports = {
                 "balanced": true
             }
         }]
+        */
     }
 };
