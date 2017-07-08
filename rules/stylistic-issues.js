@@ -16,13 +16,16 @@ module.exports = {
         // require or disallow trailing commas
         "comma-dangle": ["error", "never"],
 
-        /*
         // enforce consistent spacing before and after commas
         "comma-spacing": ["error", { before: false, after: true }],
 
         // enforce consistent comma style
         "comma-style": ["error", "last"],
 
+        // require or disallow use of semicolons instead of ASI
+        "semi": ["error", "always"],
+
+        /*
         // enforce consistent spacing inside computed property brackets
         "computed-property-spacing": ["error", "never"],
 
@@ -185,9 +188,6 @@ module.exports = {
 
         // enforce consistent spacing before and after semicolons
         "semi-spacing": ["error", { before: false, after: true }],
-
-        // require or disallow use of semicolons instead of ASI
-        "semi": ["error", "always"],
 
         // enforce consistent spacing before blocks
         // TODO: would like to upgrade to an error
