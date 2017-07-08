@@ -16,9 +16,6 @@ module.exports = {
         // require or disallow trailing commas
         "comma-dangle": ["error", "never"],
 
-        // enforce consistent spacing before and after commas
-        "comma-spacing": ["error", { before: false, after: true }],
-
         // enforce consistent comma style
         "comma-style": ["error", "last"],
 
@@ -26,6 +23,9 @@ module.exports = {
         "semi": ["error", "always"],
 
         /*
+        // enforce consistent spacing before and after commas
+        "comma-spacing": ["error", { before: false, after: true }],
+
         // enforce consistent spacing inside computed property brackets
         "computed-property-spacing": ["error", "never"],
 
