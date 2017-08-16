@@ -20,7 +20,7 @@ module.exports = {
         "no-undefined": "error",
 
         // disallow unused variables
-        "no-unused-vars": ["error", { vars: "local", args: "after-used" }],
+        "no-unused-vars": ["error", { "vars": "local", "args": "after-used", "argsIgnorePattern": "e|ops|attrs" }],
 
         // disallow the use of variables before they are defined
         // TODO: our existing style goes against this
