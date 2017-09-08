@@ -22,9 +22,10 @@ module.exports = {
         // require or disallow use of semicolons instead of ASI
         "semi": ["error", "always"],
 
-        /*
         // enforce consistent spacing before and after commas
         "comma-spacing": ["error", { before: false, after: true }],
+
+        /*
 
         // enforce consistent spacing inside computed property brackets
         "computed-property-spacing": ["error", "never"],
