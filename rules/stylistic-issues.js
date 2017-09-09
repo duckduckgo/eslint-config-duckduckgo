@@ -25,8 +25,6 @@ module.exports = {
         // enforce consistent spacing before and after commas
         "comma-spacing": ["error", { before: false, after: true }],
 
-        /*
-
         // enforce consistent spacing inside computed property brackets
         "computed-property-spacing": ["error", "never"],
 
@@ -38,6 +36,26 @@ module.exports = {
 
         // require or disallow spacing between function identifiers and their invocations
         "func-call-spacing": ["error", "never"],
+        
+        // require parentheses when invoking a constructor with no arguments
+        "new-parens": "error",
+
+        // require a newline after each call in a method chain
+        "newline-per-chained-call": "error",
+
+        // disallow Array constructors
+        "no-array-constructor": "error",
+
+        // disallow bitwise operators
+        "no-bitwise": ["error", { "int32Hint": true }],
+
+        // disallow if statements as the only statement in else blocks
+        "no-lonely-if": "error",
+        
+        /*
+
+        // disallow continue statements
+        "no-continue": "error",
 
         // require or disallow named function expressions
         // TODO: discuss this
@@ -51,8 +69,6 @@ module.exports = {
         // TODO: agree on a max length
         "id-length": ["warn", { min: 1, max: 30 }], 
 
-        // enforce consistent indentation
-        "indent": ["error", 4], 
 
         // enforce consistent spacing between keys and values in object literal properties
         // TODO: it appears we have leaned towards this style already { "foo" : 42 };
@@ -83,9 +99,6 @@ module.exports = {
         // TODO: review
         "new-cap": "off",
 
-        // require parentheses when invoking a constructor with no arguments
-        "new-parens": "error",
-
         // require or disallow an empty line after variable declarations
         // TODO: do we want this?
         "newline-after-var": "off",
@@ -93,21 +106,6 @@ module.exports = {
         // require an empty line before return statements
         // TODO: do we want this?
         "newline-before-return": "off",
-
-        // require a newline after each call in a method chain
-        "newline-per-chained-call": "error",
-
-        // disallow Array constructors
-        "no-array-constructor": "error",
-
-        // disallow bitwise operators
-        "no-bitwise": ["error", { "int32Hint": true }],
-
-        // disallow continue statements
-        "no-continue": "error",
-        
-        // disallow if statements as the only statement in else blocks
-        "no-lonely-if": "error",
 
         // disallow mixed binary operators 
         "no-mixed-operators": ["error", {
