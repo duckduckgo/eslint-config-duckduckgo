@@ -6,7 +6,7 @@ module.exports = {
         "no-cond-assign": "off",
 
         // disallow constant expressions in conditions
-        "no-constant-condition": "warn",
+        "no-constant-condition": "error",
 
         // disallow control characters in regular expressions
         "no-control-regex": "error",
@@ -24,7 +24,7 @@ module.exports = {
         "no-duplicate-case": "error",
 
         // disallow empty character classes in regular expressions 
-        "no-empty-character-class": "warn",
+        "no-empty-character-class": "error",
 
         // disallow empty statements
         "no-empty": "error",
@@ -33,7 +33,7 @@ module.exports = {
         "no-ex-assign": "error",
 
         // disallow unnecessary boolean casts
-        "no-extra-boolean-cast": "warn",
+        "no-extra-boolean-cast": "error",
 
         // disallow unnecessary parentheses (temporarily disabled)
         // TODO: review (we should make this a warning at a later date)

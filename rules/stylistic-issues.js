@@ -11,7 +11,7 @@ module.exports = {
         "brace-style": ["error", "1tbs", { allowSingleLine: true }],
 
         // enforce camelcase naming convention
-        "camelcase": ["warn", { properties: "never" }], // we cannot make this an error condition yet
+        "camelcase": ["error", { properties: "never" }], // we cannot make this an error condition yet
 
         // require or disallow trailing commas
         "comma-dangle": ["error", "never"],
@@ -52,145 +52,31 @@ module.exports = {
         // disallow if statements as the only statement in else blocks
         "no-lonely-if": "error",
         
-        /*
-
-        // disallow continue statements
-        "no-continue": "error",
-
-        // require or disallow named function expressions
-        // TODO: discuss this
-        "func-names": "off", 
-
-        // enforce the consistent use of either function declarations or expressions
-        // TODO: discuss this (and pick a style)
-        "func-style": ["off", "declaration"],
-
-        // enforce minimum and maximum identifier lengths
-        // TODO: agree on a max length
-        "id-length": ["warn", { min: 1, max: 30 }], 
-
-
-        // enforce consistent spacing between keys and values in object literal properties
-        // TODO: it appears we have leaned towards this style already { "foo" : 42 };
-        "key-spacing": ["warn", { beforeColon: false, afterColon: true }],
-
-        // enforce consistent spacing before and after keywords
-        "keyword-spacing": ["warn", {
-            before: true,
-            after: true
+        // enforce consistent spacing after the // or /* in a comment
+        "spaced-comment": ["error", "always", {
+            "line": {
+                "markers": ["/"],
+                "exceptions": ["-", "+"]
+            },
+            "block": {
+                "markers": ["!"],
+                "exceptions": ["*"],
+                "balanced": true
+            }
         }],
 
-        // enforce position of line comments
-        // TODO: do we want this?
-        "line-comment-position": "off",
-
+        // enforce consistent spacing before or after unary operators
+        "space-unary-ops": ["error", {
+            "words": true,
+            "nonwords": false,
+            "overrides": {}
+        }],
+        
         // enforce consistent linebreak style
         "linebreak-style": ["error", "unix"],
 
-        // require empty lines around comments
-        // TODO: do we want this?
-        "lines-around-comment": "off", 
-
-        // enforce a maximum line length
-        // TODO: configure
-        "max-len": ["error", 120, 4, {}],
-
-        // require constructor names to begin with a capital letter
-        // TODO: review
-        "new-cap": "off",
-
-        // require or disallow an empty line after variable declarations
-        // TODO: do we want this?
-        "newline-after-var": "off",
-
-        // require an empty line before return statements
-        // TODO: do we want this?
-        "newline-before-return": "off",
-
-        // disallow mixed binary operators 
-        "no-mixed-operators": ["error", {
-            groups: [
-                ["+", "-", "*", "/", "%", "**"],
-                ["&", "|", "^", "~", "<<", ">>", ">>>"],
-                ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-                ["&&", "||"],
-                ["in", "instanceof"]
-            ],
-            allowSamePrecedence: true
-        }],
-
         // disallow mixed spaces and tabs for indentation
         "no-mixed-spaces-and-tabs": "error",
-
-        // disallow multiple empty lines
-        "no-multiple-empty-lines": ["error", { max: 2, maxEOF: 1 }],
-
-        // disallow nested ternary expressions
-        // TODO: review
-        "no-nested-ternary": "error",
-
-        // disallow use of the Object constructor
-        "no-new-object": "error",
-
-        // disallow use of unary operators, ++ and --
-        // TODO: review, we probably don't want this
-        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-
-        // disallow specified syntax
-        // TODO: add ES6 features here?
-        "no-restricted-syntax": ["error", "WithStatement"],
-
-        // disallow space between function identifier and application
-        "no-spaced-func": "error",
-
-        // disallow all tabs
-        "no-tabs": "error",
-
-        // disallow trailing whitespace at the end of lines
-        "no-trailing-spaces": "off",
-
-        // disallow ternary operators when simpler alternatives exist
-        "no-unneeded-ternary": "error",
-
-        // disallow whitespace before properties
-        "no-whitespace-before-property": "error",
-
-        // enforce consistent line breaks inside braces
-        "object-curly-newline": ["error", { "minProperties": 1 }],
-
-        // enforce consistent spacing inside braces 
-        "object-curly-spacing": ["error", "always"],
-
-        // enforce placing object properties on separate lines
-        "object-property-newline": ["error", {
-            allowMultiplePropertiesPerLine: true,
-        }],
-
-        // require or disallow newlines around variable declarations
-        "one-var-declaration-per-line": ["error", "always"],
-
-        // enforce variables to be declared either together or separately in functions
-        "one-var": ["error", "always"],
-
-        // equire or disallow assignment operator shorthand where possible
-        "operator-assignment": ["error", "always"],
-
-        // require or disallow padding within blocks
-        "padded-blocks": ["error", "never"],
-
-        // require quotes around object literal property names
-        // TODO: review
-        "quote-props": ["off", "as-needed", { keywords: false, unnecessary: true, numbers: false }],
-
-        // enforce the consistent use of either backticks, double, or single quotes
-        "quotes": ["warn", "double", { avoidEscape: true }],
-
-        // enforce consistent spacing before and after semicolons
-        "semi-spacing": ["error", { before: false, after: true }],
-
-        // enforce consistent spacing before blocks
-        // TODO: would like to upgrade to an error
-        "space-before-blocks": "warn",
 
         // enforce consistent spacing before function definition opening parenthesis
         "space-before-function-paren": ["error", {
@@ -205,25 +91,139 @@ module.exports = {
         // require spacing around infix operators
         "space-infix-ops": ["error", { "int32Hint": false }],
 
-        // enforce consistent spacing before or after unary operators
-        "space-unary-ops": ["error", {
-            "words": true,
-            "nonwords": false,
-            "overrides": {}
+        // enforce consistent spacing before and after semicolons
+        "semi-spacing": ["error", { before: false, after: true }],
+
+        // disallow multiple empty lines
+        "no-multiple-empty-lines": ["error", { max: 2, maxEOF: 1 }],
+
+        // disallow use of the Object constructor
+        "no-new-object": "error",
+
+        // disallow all tabs
+        "no-tabs": "error",
+
+        // disallow trailing whitespace at the end of lines
+        "no-trailing-spaces": "off",
+
+        // disallow space between function identifier and application
+        "no-spaced-func": "error",
+
+        // equire or disallow assignment operator shorthand where possible
+        "operator-assignment": ["error", "always"],
+
+        // enforce variables to be declared either together or separately in functions
+        "one-var": ["error", "always"],
+
+        // require or disallow newlines around variable declarations
+        "one-var-declaration-per-line": ["error", "always"],
+
+        // disallow whitespace before properties
+        "no-whitespace-before-property": "error",
+
+        // disallow ternary operators when simpler alternatives exist
+        "no-unneeded-ternary": "error",
+
+        // enforce consistent spacing inside braces 
+        "object-curly-spacing": ["error", "always"],
+
+        // enforce placing object properties on separate lines
+        "object-property-newline": ["error", {
+            allowMultiplePropertiesPerLine: true,
         }],
 
-        // enforce consistent spacing after the // or /* in a comment
-        "spaced-comment": ["error", "always", {
-            "line": {
-                "markers": ["/"],
-                "exceptions": ["-", "+"]
-            },
-            "block": {
-                "markers": ["!"],
-                "exceptions": ["*"],
-                "balanced": true
+        // disallow continue statements
+        "no-continue": "error",
+
+        // enforce consistent spacing between keys and values in object literal properties
+        "key-spacing": ["error", { beforeColon: false, afterColon: true }],
+
+        // enforce consistent spacing before blocks
+        "space-before-blocks": "error",
+
+        // enforce consistent spacing before and after keywords
+        "keyword-spacing": ["error", {
+            before: true,
+            after: true
+        }],
+        
+        // enforce a maximum line length
+        // TODO: Reduce down to a smaller number, ideally 140.
+        "max-len": ["error", 200, 4, {
+            "ignoreStrings": true 
+        }],
+
+        // require constructor names to begin with a capital letter
+        "new-cap": ["error", { 
+            "newIsCap": true,
+            "capIsNew": false
+        }],
+
+        // disallow specified syntax
+        // TODO: add ES6 keywords here?
+        "no-restricted-syntax": ["error", 
+            {
+                "selector": "WithStatement",
+                "message": "with violates lexical scope, making program analysis (e.g. for security) hard to infeasible."
             }
-        }]
+        ],
+
+        // disallow use of unary operators, ++ and --
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+
+        // disallow nested ternary expressions
+        "no-nested-ternary": "error",
+
+        // require or disallow padding within blocks
+        "padded-blocks": ["error", "never"],
+
+        // disallow mixed binary operators 
+        "no-mixed-operators": ["error", {
+            groups: [
+                ["+", "-", "*", "/", "%", "**"],
+                ["&", "|", "^", "~", "<<", ">>", ">>>"],
+                ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+                ["&&", "||"],
+                ["in", "instanceof"]
+            ],
+            allowSamePrecedence: true
+        }],
+
+        // require quotes around object literal property names
+        "quote-props": ["error", "as-needed", { keywords: false, unnecessary: true, numbers: false }],
+
+        /*
+        // enforce consistent line breaks inside braces
+        // TODO: revisit once we've upgraded to ESLint 4.x.
+        "object-curly-newline": ["error", { "minProperties": 1 }],
+
+        // require or disallow named function expressions
+        // TODO: discuss this
+        "func-names": "off", 
+
+        // enforce the consistent use of either function declarations or expressions
+        // TODO: discuss this (and pick a style)
+        "func-style": ["off", "declaration"],
+
+        // enforce position of line comments
+        // TODO: do we want this?
+        "line-comment-position": "off",
+
+        // require empty lines around comments
+        // TODO: do we want this?
+        "lines-around-comment": "off", 
+
+        // require or disallow an empty line after variable declarations
+        // TODO: do we want this?
+        "newline-after-var": "off",
+
+        // require an empty line before return statements
+        // TODO: do we want this?
+        "newline-before-return": "off",
+
+        // enforce the consistent use of either backticks, double, or single quotes
+        // TODO: wait until ES6 migration path.
+        "quotes": ["warn", "double", { avoidEscape: true }],
         */
     }
 };
