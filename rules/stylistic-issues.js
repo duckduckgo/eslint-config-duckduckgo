@@ -80,8 +80,8 @@ module.exports = {
 
         // enforce consistent spacing before function definition opening parenthesis
         "space-before-function-paren": ["error", {
-            "anonymous": "always",
-            "named": "always",
+            "anonymous": "never",
+            "named": "never",
             "asyncArrow": "ignore"
         }],
 
