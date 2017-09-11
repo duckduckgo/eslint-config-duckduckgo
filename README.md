@@ -1,8 +1,8 @@
 # DuckDuckGo JavaScript Style Guide
 
-To lint all our JavaScript we make use of [ESLint](http://eslint.org). This repository contains our default linting configuration.
+To lint all our JavaScript we make use of [ESLint](http://eslint.org). This repository contains our default lining configuration.
 
-What follows is a high level summary of how we've applied ESLint's [rules](http://eslint.org/docs/rules/):
+What follows is a high-level summary of how we've applied ESLint's [rules](http://eslint.org/docs/rules/):
 
 ### [Best Practices](http://eslint.org/docs/rules/#best-practices)
 
