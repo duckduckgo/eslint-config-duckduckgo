@@ -148,8 +148,7 @@ module.exports = {
         }],
         
         // enforce a maximum line length
-        // TODO: Reduce down to a smaller number, ideally 140.
-        "max-len": ["error", 200, 4, {
+        "max-len": ["error", 80, 4, {
             "ignoreStrings": true 
         }],
 
