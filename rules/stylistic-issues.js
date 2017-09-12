@@ -112,9 +112,6 @@ module.exports = {
         // equire or disallow assignment operator shorthand where possible
         "operator-assignment": ["error", "always"],
 
-        // enforce variables to be declared either together or separately in functions
-        "one-var": ["error", "always"],
-
         // require or disallow newlines around variable declarations
         "one-var-declaration-per-line": ["error", "always"],
 
@@ -148,7 +145,7 @@ module.exports = {
         }],
         
         // enforce a maximum line length
-        "max-len": ["error", 80, 4, {
+        "max-len": ["error", 100, 4, {
             "ignoreStrings": true 
         }],
 
@@ -191,7 +188,14 @@ module.exports = {
         // require quotes around object literal property names
         "quote-props": ["error", "as-needed", { keywords: false, unnecessary: true, numbers: false }],
 
-        /*
+        // require or disallow an empty line after variable declarations
+        "newline-after-var": ["error", "always"]
+
+        /*         
+        // enforce variables to be declared either together or separately in functions
+        // TODO: we need to revisit this once we start using let from ES6.
+        "one-var": ["error", "always"],
+
         // enforce consistent line breaks inside braces
         // TODO: revisit once we've upgraded to ESLint 4.x.
         "object-curly-newline": ["error", { "minProperties": 1 }],
@@ -211,10 +215,6 @@ module.exports = {
         // require empty lines around comments
         // TODO: do we want this?
         "lines-around-comment": "off", 
-
-        // require or disallow an empty line after variable declarations
-        // TODO: do we want this?
-        "newline-after-var": "off",
 
         // require an empty line before return statements
         // TODO: do we want this?
