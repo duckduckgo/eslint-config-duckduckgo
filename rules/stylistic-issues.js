@@ -188,8 +188,19 @@ module.exports = {
         // require quotes around object literal property names
         "quote-props": ["error", "as-needed", { keywords: false, unnecessary: true, numbers: false }],
 
-        // require or disallow an empty line after variable declarations
-        "newline-after-var": ["error", "always"]
+        // enforce a maximum depth that blocks can be nested
+        "max-depth": ["error", 4],
+
+        // enforce a maximum number of parameters in function definitions
+        "max-params": ["error", 3],
+
+        // Require or disallow padding lines between statements 
+        "padding-line-between-statements": ["error", 
+            { blankLine: "always", prev: ["return", "var"], next: ["*"] },
+            { blankLine: "any", prev: ["return", "var"], next: ["var"] },
+            { blankLine: "always", prev: "directive", next: "*" },
+            { blankLine: "any",    prev: "directive", next: "directive" }
+        ]
 
         /*         
         // enforce variables to be declared either together or separately in functions
@@ -215,10 +226,6 @@ module.exports = {
         // require empty lines around comments
         // TODO: do we want this?
         "lines-around-comment": "off", 
-
-        // require an empty line before return statements
-        // TODO: do we want this?
-        "newline-before-return": "off",
 
         // enforce the consistent use of either backticks, double, or single quotes
         // TODO: wait until ES6 migration path.
