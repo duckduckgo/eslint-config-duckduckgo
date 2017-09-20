@@ -2,8 +2,7 @@
 module.exports = {
     rules: {
         // disallow assignment operators in conditional expressions
-        // TODO: reivew, we are doing this in multiple places.
-        "no-cond-assign": "off",
+        "no-cond-assign": ["error", "always"],
 
         // disallow constant expressions in conditions
         "no-constant-condition": "error",
@@ -35,13 +34,8 @@ module.exports = {
         // disallow unnecessary boolean casts
         "no-extra-boolean-cast": "error",
 
-        // disallow unnecessary parentheses (temporarily disabled)
-        // TODO: review (we should make this a warning at a later date)
-        "no-extra-parens": ["off", "all", {
-            conditionalAssign: true,
-            nestedBinaryExpressions: true,
-            returnAssign: true,
-        }],
+        // disallow unnecessary parentheses
+        "no-extra-parens": ["error", "functions"],
 
         // disallow unnecessary semicolons
         "no-extra-semi": "error",
@@ -87,6 +81,9 @@ module.exports = {
         "use-isnan": "error",
 
         // ensure that the results of typeof are compared against a valid string
-        "valid-typeof": ["error", { requireStringLiterals: true }]
+        "valid-typeof": ["error", { requireStringLiterals: true }],
+
+        // disallow comparing against -0
+         "no-compare-neg-zero": "error"
     }
 };
