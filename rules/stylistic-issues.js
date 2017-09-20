@@ -205,6 +205,7 @@ module.exports = {
         // enforce the consistent use of either backticks, double, or single quotes
         "quotes": ["error", "single", { avoidEscape: true, allowTemplateLiterals: true }],
 
+        // require or disallow Unicode byte order mark (BOM)
         "unicode-bom": ["error", "never"]
 
         /*         
