@@ -104,7 +104,7 @@ module.exports = {
         "no-tabs": "error",
 
         // disallow trailing whitespace at the end of lines
-        "no-trailing-spaces": "off",
+        "no-trailing-spaces": "error",
 
         // disallow space between function identifier and application
         "no-spaced-func": "error",
@@ -200,7 +200,13 @@ module.exports = {
             { blankLine: "any", prev: ["return", "var"], next: ["var"] },
             { blankLine: "always", prev: "directive", next: "*" },
             { blankLine: "any",    prev: "directive", next: "directive" }
-        ]
+        ],
+
+        // enforce the consistent use of either backticks, double, or single quotes
+        "quotes": ["error", "single", { avoidEscape: true, allowTemplateLiterals: true }],
+
+        // require or disallow Unicode byte order mark (BOM)
+        "unicode-bom": ["error", "never"]
 
         /*         
         // enforce variables to be declared either together or separately in functions
@@ -226,10 +232,6 @@ module.exports = {
         // require empty lines around comments
         // TODO: do we want this?
         "lines-around-comment": "off", 
-
-        // enforce the consistent use of either backticks, double, or single quotes
-        // TODO: wait until ES6 migration path.
-        "quotes": ["warn", "double", { avoidEscape: true }],
         */
     }
 };

@@ -6,11 +6,13 @@ module.exports = {
         "block-scoped-var": "off",
         
         // specify the maximum cyclomatic complexity allowed in a program
-        "complexity": ["warn", 20],
+        "complexity": ["error", 20],
 
         // require return statements to either always or never specify values
-        // TODO: review this.
-        "consistent-return": ["off", { "treatUndefinedAsUnspecified": false }],
+        "consistent-return": ["error", { "treatUndefinedAsUnspecified": false }],
+
+        // require the use of === and !==
+        "eqeqeq": ["error", "always", { "null": "ignore" }],
 
         // specify curly brace conventions for all control statements
         "curly": ["error", "multi-line"],
@@ -77,8 +79,7 @@ module.exports = {
         "no-redeclare": "error",
         
         // disallow use of assignment in return statement
-        // TODO: discuss this.
-        "no-return-assign": "off",
+        "no-return-assign": ["error", "except-parens"],
         
         // disallow javascript: urls
         "no-script-url": "error",
@@ -106,6 +107,28 @@ module.exports = {
         "vars-on-top": "off",
 
         // require or disallow Yoda conditions
-        "yoda": "error"
+        "yoda": "error",
+
+        // disallow unmodified conditions of loops
+        "no-unmodified-loop-condition": "error",
+
+        // disallow multiple spaces
+        "no-multi-spaces": "error",
+
+        // disallow Multiline Strings
+        "no-multi-str": "error",
+
+        // disallow the use of eval()-like methods
+        "no-implied-eval": "error",
+
+        // disallow unnecessary escape characters
+        "no-useless-escape": "error",
+
+        // disallow the use of the __iterator__ property
+        "no-iterator": "error"
+
+        // require parentheses around immediate function invocations
+        // TODO: our current style goes against this
+        //"wrap-iife": ["error", "any", { functionPrototypeMethods: true }]
     }
 };
