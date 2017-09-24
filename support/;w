@@ -21,5 +21,4 @@ function listRules(heading, category) {
 
 console.log(listRules('Best Practices', bestPractices));
 console.log(listRules('Possible Errors', possibleErrors));
-console.log(listRules('Stylistic Issues', stylisticIssues));
 console.log(listRules('Variables', variables));
