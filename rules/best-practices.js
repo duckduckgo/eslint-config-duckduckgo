@@ -3,7 +3,7 @@ module.exports = {
     rules: {
         // enforce the use of variables within the scope they are defined
         // We may want this someday for ES6 migration path
-        "block-scoped-var": "off",
+        // "block-scoped-var": "off",
         
         // specify the maximum cyclomatic complexity allowed in a program
         "complexity": ["error", 20],
@@ -73,7 +73,7 @@ module.exports = {
 
         // disallow reassigning function parameters
         // TOOD: discuss this.
-        "no-param-reassign": ["off", { props: false }],
+        // "no-param-reassign": ["off", { props: false }],
 
         // disallow declaring the same variable more then once
         "no-redeclare": "error",
@@ -104,7 +104,7 @@ module.exports = {
 
         // require var declarations be placed at the top of their containing scope
         // TODO: we should take this seriously for ES6 migration path
-        "vars-on-top": "off",
+        // "vars-on-top": "off",
 
         // require or disallow Yoda conditions
         "yoda": "error",
