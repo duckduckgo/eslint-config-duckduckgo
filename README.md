@@ -111,7 +111,6 @@ What follows is a high-level summary of how we've applied ESLint's [rules](http:
 * [no-unneeded-ternary](https://eslint.org/docs/rules/no-unneeded-ternary)
 * [object-curly-spacing](https://eslint.org/docs/rules/object-curly-spacing)
 * [object-property-newline](https://eslint.org/docs/rules/object-property-newline)
-* [no-continue](https://eslint.org/docs/rules/no-continue)
 * [key-spacing](https://eslint.org/docs/rules/key-spacing)
 * [space-before-blocks](https://eslint.org/docs/rules/space-before-blocks)
 * [keyword-spacing](https://eslint.org/docs/rules/keyword-spacing)

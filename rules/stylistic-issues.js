@@ -129,9 +129,6 @@ module.exports = {
             allowMultiplePropertiesPerLine: true,
         }],
 
-        // disallow continue statements
-        "no-continue": "error",
-
         // enforce consistent spacing between keys and values in object literal properties
         "key-spacing": ["error", { beforeColon: false, afterColon: true }],
 
