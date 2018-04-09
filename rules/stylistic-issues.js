@@ -203,7 +203,10 @@ module.exports = {
         "quotes": ["error", "single", { avoidEscape: true, allowTemplateLiterals: true }],
 
         // require or disallow Unicode byte order mark (BOM)
-        "unicode-bom": ["error", "never"]
+        "unicode-bom": ["error", "never"],
+
+        // enforce consistent indentation
+        "indent": ["warn", 4, { "SwitchCase": 1 }]
 
         /*         
         // enforce variables to be declared either together or separately in functions
