@@ -1,6 +1,6 @@
 {
   "name": "@duckduckgo/eslint-config-duckduckgo",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "DuckDuckGo ESLint default configuration for JavaScript linting.",
   "main": "index.js",
   "scripts": {
