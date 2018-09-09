@@ -191,14 +191,6 @@ module.exports = {
         // enforce a maximum number of parameters in function definitions
         "max-params": ["error", 3],
 
-        // Require or disallow padding lines between statements 
-        "padding-line-between-statements": ["error", 
-            { blankLine: "always", prev: ["return", "var"], next: ["*"] },
-            { blankLine: "any", prev: ["return", "var"], next: ["var"] },
-            { blankLine: "always", prev: "directive", next: "*" },
-            { blankLine: "any",    prev: "directive", next: "directive" }
-        ],
-
         // enforce the consistent use of either backticks, double, or single quotes
         "quotes": ["error", "single", { avoidEscape: true, allowTemplateLiterals: true }],
 
